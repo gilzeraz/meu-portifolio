@@ -128,3 +128,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+const form = document.getElementById("my-form");
+const status = document.getElementById("form-status");
+const btn = document.getElementById("submit-btn");
+
+async function handleSubmit(event) {
+  event.preventDefault(); // Impede o recarregamento da página
+  
+  const data = new FormData(event.target);
+  
+  btn.disabled = true; // Desativa o botão para evitar múltiplos cliques
+  btn.innerText = "Enviando...";
+
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "✅ Mensagem enviada com sucesso!";
+      status.style.color = "#38bdf8"; // Cor do seu tema
+      status.style.display = "block";
+      form.reset(); // Limpa o formulário
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+        } else {
+          status.innerHTML = "❌ Ocorreu um erro ao enviar.";
+        }
+        status.style.color = "#ff4d4d";
+        status.style.display = "block";
+      })
+    }
+  }).catch(error => {
+    status.innerHTML = "❌ Erro de conexão. Tente novamente.";
+    status.style.color = "#ff4d4d";
+    status.style.display = "block";
+  }).finally(() => {
+    btn.disabled = false;
+    btn.innerText = "Enviar para Victor";
+  });
+}
+
+form.addEventListener("submit", handleSubmit);
