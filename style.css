@@ -466,3 +466,50 @@ section { padding: 120px 10% 80px; min-height: 100vh; display: flex; flex-direct
         opacity: 0;
     }
 }
+
+/* --- RESPONSIVIDADE TOTAL --- */
+
+@media (max-width: 1024px) {
+    .about-highlights { grid-template-columns: repeat(2, 1fr); }
+    .skills-grid-6, .projects-grid-6 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    /* Navbar Mobile */
+    .navbar { padding: 1rem 5%; }
+    .nav-links { display: none; } /* Idealmente aqui você teria um menu hambúrguer */
+
+    /* Hero Section */
+    .hero-inner h1 { font-size: 2.2rem; }
+    .hero-inner p { font-size: 1rem; }
+    .profile-pic { width: 150px; height: 150px; }
+
+    /* Seções */
+    section { padding: 80px 5% 60px; }
+    .section-title { font-size: 2rem; }
+
+    /* Sobre Mim */
+    .about-highlights { grid-template-columns: 1fr; }
+    .about-container-text { font-size: 1rem; text-align: justify; }
+
+    /* Currículo */
+    .curriculum-grid { grid-template-columns: 1fr; gap: 15px; }
+    .resume-item { flex-direction: column; align-items: center; text-align: center; }
+    .resume-content { align-items: center; }
+
+    /* Skills e Projetos */
+    .skills-grid-6, .projects-grid-6 { grid-template-columns: 1fr; }
+    .project-card { height: 250px; }
+
+    /* Contato */
+    .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .hero-btns { flex-direction: column; width: 100%; }
+    .btn { width: 100%; text-align: center; }
+    
+    /* Ajuste fino para os cards de currículo no celular */
+    .resume-item { padding: 15px; }
+    .inst-name { font-size: 0.8rem; }
+}
