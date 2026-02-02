@@ -1,219 +1,300 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portifolio</title>
+    <title>Victor Gil | Portfólio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
+
 <body>
-    <header class="header">
-        <a href="#home" class="logo">Victor <span>Gil</span></a>
 
-        <i class='bxr  bx-menu' id="menu-icon"></i> 
+    <div class="star-container">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#sobre">Sobre Mim</a>
-            <a href="#experiencia">Experiência</a>
-            <a href="#projects">Projetos</a>
-            <a href="#skills">Skills</a>
-            <a href="#contato">Contato</a>
-
+    <header class="navbar">
+        <div class="logo"><span class="code-icon">&lt;</span> VictorGil <span class="code-icon">/&gt;</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav_home">Início</a></li>
+                <li><a href="#about" data-i18n="nav_about">Sobre</a></li>
+                <li><a href="#curriculum" data-i18n="nav_curriculum">Currículo</a></li>
+                <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projetos</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contato</a></li>
+            </ul>
         </nav>
-
-
+        <div class="lang-selector">
+            <button onclick="changeLang('pt')"><img src="https://flagcdn.com/w40/br.png" alt="PT"></button>
+            <button onclick="changeLang('en')"><img src="https://flagcdn.com/w40/us.png" alt="EN"></button>
+            <button onclick="changeLang('es')"><img src="https://flagcdn.com/w40/es.png" alt="ES"></button>
+        </div>
     </header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Olá</h3>
-            <h1>Me chamo <span>Victor</span></h1>
-            <h3 class="text-animation">
-                Eu sou um <span></span>
-            </h3>
-            <p>Focado em converter grandes volumes de informação em insights estratégicos e decisões inteligentes. Atuo em todo o ciclo de dados, desde a coleta, tratamento e modelagem (ETL) até a carga em ambientes de análise. Desenvolvo visualizações e dashboards que traduzem métricas complexas em indicadores claros para o negócio.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-            </div>
-            <a href="#" class="btn">Download CV</a>
-        </div>
-
-        <div class="home-img">
-            <img src="Assets/euzao.png" alt="">
-        </div>
-    </section>
-
-    <section class="about" id="sobre">
-        <div class="about-img">
-            <img src="Assets/eudnv.jpg" alt="">
-        </div>
-        <div class="about-content">
-            <h2 class="heading">Sobre <span>Mim</span></h2>
-            <h3 class="text-animation"><span></span></h3>
-<p>Tenho 26 anos, sou <span>Técnico em Eletrônica pela ETEC e Engenheiro Mecânico formado pela UNIP, com mais de 6 anos de experiência em Tecnologia da Informação.</span> Atualmente atuo como Analista de Sistemas na Venditx, realizando análises estratégicas de ambientes Aloha NCR, envolvendo dados operacionais, logs, integrações, desempenho de sistemas e diagnóstico de falhas críticas.</p>
-
-<p>No dia a dia, trabalho com análise de dados e sistemas para identificar padrões, causas raiz e oportunidades de otimização, conectando tecnologia, operações de ponto de venda e necessidades de negócio com foco em eficiência, confiabilidade e escalabilidade.</p>
-
-<p>Atualmente curso <span>Pós-graduação em Data Analytics pela FIAP e Análise e Desenvolvimento de Sistemas pela Impacta.</span> No tempo livre, gosto de treinar, ler, jogar e assistir filmes.</p>
-
-            <a href="#" class="btn">Saiba Mais</a>
-        </div>
-    </section>
-
-    <section class="services" id="experiencia">
-        <h2 class="heading">Experiência</h2>
-        <div class="service-container">
-            <div class="services-box">
-                <i class="fa-solid fa-computer"></i>
-                <h3>Venditx</h3>
-                <p><span>Analista de Sistemas: </span>Atuo na manutenção e gestão da base de dados de clientes, abrangendo cadastro de itens, promoções, impostos e fichas técnicas. Além das atividades de suporte e análise de inconsistências sistêmicas, realizo implementações presenciais em campo, acompanhando inaugurações e aberturas de novas lojas. <br> <span>Mar de 2025 - Atualmente</span></p>
-                <a href="#" class="btn">Saber Mais</a>
-            </div>
-            <div class="services-box">
-                <i class="fa-solid fa-computer"></i>
-                <h3>NCR Voyix</h3>
-                <p><span>Analista de Cadastro: </span>Atendia demandas de clientes referente a manutenção da base de dados, como cadastro de itens, promoções, impostos, ficha técnica entre outros. Em situações oportunas também analiso problemas no software provenientes ou não de erros de cadastro. Participo de reuniões estratégicas e de alinhamento com o cliente interno e externo. <br> <span>Mar de 2023 - Mar de 2025</span></p>
-                <a href="#" class="btn">Saber Mais</a>
-            </div>
-            <div class="services-box">
-                <i class="fa-solid fa-computer"></i>
-                <h3>NCR Voyix</h3>
-                <p><span>Suporte Nível 1: </span>Era integrante do primeiro nível de suporte do sistema Aloha, solução de frente de caixa mais popular do mundo utilizado por grandes redes de restaurantes, como KFC, Pizza Hut, Taco bell, Olive Garden entre outros. <br> <span>Mar de 2021 - Mar de 2023</span></p>
-                <a href="#" class="btn">Saber Mais</a>
-            </div>
-            <div class="services-box">
-                <i class="fa-solid fa-water"></i>
-                <h3>Flow Waterjet</h3>
-                <p><span>Vendedor Técnico: </span>Atuava como auxiliar de vendas no setor comercial para a promoção do equipamento de corte com jato d'água. <br> <span>Dez de 2018 - Mar de 2020</span></p>
-                <a href="#" class="btn">Saber Mais</a>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <section class="projects" id="projects">
-            <h2 class="heading">Projetos</h2>
-
-            <div class="projects-container">
-                <div class="projects-box">
-                    <img src="Assets/vinhos.jpg" alt="">
-                    <div class="projects-info">
-                        <h4>Exportações de Vinho</h4>
-                        <p> Análise do mercado de exportação de vinhos, com ênfase específica na indústria vinícola brasileira.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-inner">
+                <div class="photo-container">
+                    <img src="/Assets/Eu.png" class="profile-pic tilt-element" alt="Victor Gil">
                 </div>
-
-                                <div class="projects-box">
-                    <img src="Assets/ibovespa.jpg" alt="">
-                    <div class="projects-info">
-                        <h4>Previsão dos valores do Ibovespa</h4>
-                        <p>A previsão será feita com base nos dados históricos de fechamento.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                                <div class="projects-box">
-                    <img src="Assets/covid.jpg" alt="">
-                    <div class="projects-info">
-                        <h4>Análise COVID-19</h4>
-                        <p>Relatório e Modelo de Clusterização para análise do comportamento da população durante a pandemia de COVID-19</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                                <div class="projects-box">
-                    <img src="Assets/petroleo.jpg" alt="">
-                    <div class="projects-info">
-                        <h4>Previsão Petróleo Brent</h4>
-                        <p>Análise e Modelo para previsão do valor de fechamento do Petróleo Brent. </p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                                <div class="projects-box">
-                    <img src="Assets/escola.jpg" alt="">
-                    <div class="projects-info">
-                        <h4>Previsão de Presença Estudantil</h4>
-                        <p>Modelo para previsão de presença estudantil em aula.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
+                <h1 data-i18n="hero_title">Olá, eu sou <span>Victor Gil</span></h1>
+                <p data-i18n="hero_subtitle">ADS | Especialista em Dados pela FIAP</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary" data-i18n="btn_projects">Ver Projetos</a>
+                    <a href="seu-curriculo.pdf" download="Curriculo_VictorGil.pdf" class="btn btn-secondary"
+                        data-i18n="btn_resume">Currículo</a>
                 </div>
             </div>
-
         </section>
-    </section>
 
-    <section class="skills" id="skills">
+        <section id="about">
+            <h2 class="section-title" data-i18n="title_about">Sobre Mim</h2>
+            <div class="about-container-text">
+                <p data-i18n="about_p1">Tenho 26 anos, sou técnico em Eletrônica pela ETEC e formado em Engenharia Mecânica pela UNIP. Atuo na área de tecnologia há mais de 6 anos. Atualmente curso Análise e Desenvolvimento de Sistemas (ADS) e me especializo em Dados pela Pós Tech da FIAP, com foco em soluções orientadas a dados, automação e eficiência. Tenho perfil analítico, facilidade para aprender rápido e gosto de resolver problemas de forma prática e objetiva.</p>
+            </div>
+            <div class="about-highlights">
+                <div class="h-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span data-i18n="h_course">Eletrônica</span>
+                    <p data-i18n="h_inst">Etec Takashi Morita</p>
+                </div>
+                <div class="h-card">
+                    <i class="fas fa-rocket"></i>
+                    <span data-i18n="h_course1">Engenharia Mecânica</span>
+                    <p data-i18n="h_inst1">UNIP</p>
+                </div>
+                <div class="h-card">
+                    <i class="fas fa-brain"></i>
+                    <span data-i18n="h_course2">Análise e Desenvolvimento de Sistemas</span>
+                    <p data-i18n="h_inst2">IMPACTA</p>
+                </div>
+                <div class="h-card">
+                    <i class="fas fa-chart-line"></i>
+                    <span data-i18n="h_course3">Análise de Dados</span>
+                    <p data-i18n="h_inst3">FIAP</p>
+                </div>
+            </div>
+        </section>
 
-        <h2 class="heading">Skills</h2>
-        <div class="skill-bars">
-            <div class="bar">
+        <section id="curriculum">
+            <h2 class="section-title" data-i18n="nav_curriculum">Currículo</h2>
+            <div class="curriculum-grid">
                 
-                <div class="info">
-                    <span>SQL</span>
+                <div class="curriculum-column">
+                    <h3><i class="fas fa-graduation-cap"></i> <span data-i18n="cur_edu">Formação</span></h3>
+                    
+                    <div class="resume-item">
+                        <img src="/Assets/fiap.png" class="comp-logo">
+                        <div class="resume-content">
+                            <h4 class="inst-name">FIAP</h4>
+                            <span class="course-name" data-i18n="edu_fiap">Pós-graduação em Análise de Dados</span>
+                            <span class="year">2024 - 2026</span>
+                            <p class="res-desc" data-i18n="edu_fiap_desc">Foco em Big Data e Machine Learning.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <img src="/Assets/impacta_tecnologia_logo.jpeg" class="comp-logo">
+                        <div class="resume-content">
+                            <h4 class="inst-name">IMPACTA</h4>
+                            <span class="course-name" data-i18n="edu_ads">Tecnólogo em Análise e Desenvolvimento de Sistemas</span>
+                            <span class="year">2023 - 2026</span>
+                            <p class="res-desc" data-i18n="edu_ads_desc">Desenvolvimento Fullstack e Engenharia de Software.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <img src="/Assets/unip.png" class="comp-logo">
+                        <div class="resume-content">
+                            <h4 class="inst-name">UNIP</h4>
+                            <span class="course-name" data-i18n="edu_eng">Bacharelado em Engenharia Mecânica</span>
+                            <span class="year">2016 - 2021</span>
+                            <p class="res-desc" data-i18n="edu_eng_desc">Cálculo estrutural e automação industrial.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <img src="/Assets/etec.jpg" class="comp-logo">
+                        <div class="resume-content">
+                            <h4 class="inst-name">ETEC</h4>
+                            <span class="course-name" data-i18n="edu_etec">Técnico em Eletrônica</span>
+                            <span class="year">2013 - 2015</span>
+                            <p class="res-desc" data-i18n="edu_etec_desc">Hardware e sistemas embarcados.</p>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="curriculum-column">
+                    <h3><i class="fas fa-briefcase"></i> <span data-i18n="cur_exp">Experiência</span></h3>
+
+                    <div class="resume-item">
+                        <img src="/Assets/venditx.jpg" class="comp-logo">
+                        <div class="resume-content">
+                            <h4 class="inst-name">Venditx</h4>
+                            <span class="course-name" data-i18n="exp_title_1">Analista de Software</span>
+                            <span class="year" data-i18n="exp_date_1">Mar 2025 — Presente</span>
+                            <p class="res-desc" data-i18n="exp_desc_1">Gestão de base de dados, suporte sistêmico e implementações em campo.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <img src="/Assets/ncr.png" class="comp-logo">
+                        <div class="resume-content">
+                            <h4 class="inst-name">NCR Voyix</h4>
+                            <span class="course-name" data-i18n="exp_title_2">Analista de Cadastro</span>
+                            <span class="year">Mar 2023 — Mar 2025</span>
+                            <p class="res-desc" data-i18n="exp_desc_2">Manutenção de dados (impostos, promoções) e análise de inconsistências.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <img src="/Assets/ncr.png" class="comp-logo">
+                        <div class="resume-content">
+                            <h4 class="inst-name">NCR Voyix</h4>
+                            <span class="course-name" data-i18n="exp_title_3">Analista de Service Desk</span>
+                            <span class="year">Mar 2021 — Mar 2023</span>
+                            <p class="res-desc" data-i18n="exp_desc_3">Suporte técnico ao sistema Aloha e integração com parceiros logísticos.</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-item">
+                        <img src="/Assets/flow.jpeg" class="comp-logo">
+                        <div class="resume-content">
+                            <h4 class="inst-name">Flow</h4>
+                            <span class="course-name" data-i18n="exp_title_4">Vendedor Técnico</span>
+                            <span class="year">Dez 2018 — Mar 2020</span>
+                            <p class="res-desc" data-i18n="exp_desc_4">Atuação comercial técnica para venda de equipamentos de corte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title" data-i18n="nav_skills">Habilidades</h2>
+            <div class="skills-grid-6">
+                <div class="skill-group">
+                    <i class="fas fa-code"></i>
+                    <h3 data-i18n="sk_lang">Programação</h3>
+                    <div class="skill-tags">
+                        <span>Python</span><span>Java</span><span>SQL</span><span>JS</span><span>C#</span><span>C++</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <i class="fas fa-database"></i>
+                    <h3 data-i18n="sk_data">Dados</h3>
+                    <div class="skill-tags">
+                        <span>Pandas</span><span>NumPy</span><span>Spark</span><span>Hadoop</span><span>Scikit-learn</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3 data-i18n="sk_bi">Visualização & BI</h3>
+                    <div class="skill-tags">
+                        <span>Power BI</span><span>DAX</span><span>Matplotlib</span><span>Seaborn</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <i class="fas fa-wrench"></i>
+                    <h3 data-i18n="sk_tools">Ferramentas</h3>
+                    <div class="skill-tags">
+                        <span>Git</span><span>GitHub</span><span>FastAPI</span><span>Postman</span><span>PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <i class="fas fa-headset"></i>
+                    <h3 data-i18n="sk_support">Atendimento</h3>
+                    <div class="skill-tags">
+                        <span>Zendesk</span><span>Jira</span><span>SAC+</span><span>SNDESK</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title" data-i18n="nav_projects">Projetos</h2>
+            <div class="projects-grid-6">
+                
+                <div class="project-card tilt-element" style="background-image: url('Assets/vinho.jpg')">
+                    <div class="p-overlay">
+                        <h3 data-i18n="proj_title_1">Exportações de Vinho</h3>
+                        <p data-i18n="proj_desc_1">Análise do mercado de exportação de vinhos brasileiros.</p>
+                        <a href="#" class="proj-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
                 </div>
 
-                <div class="progress-line css">
-                    <span></span>
+                <div class="project-card tilt-element" style="background-image: url('Assets/ibovespa.jpg')">
+                    <div class="p-overlay">
+                        <h3 data-i18n="proj_title_2">Ibovespa</h3>
+                        <p data-i18n="proj_desc_2">Previsão de valores baseada em dados históricos.</p>
+                        <a href="#" class="proj-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-element" style="background-image: url('Assets/covid.jpg')">
+                    <div class="p-overlay">
+                        <h3 data-i18n="proj_title_3">Análise COVID-19</h3>
+                        <p data-i18n="proj_desc_3">Modelo de Clusterização para análise comportamental.</p>
+                        <a href="#" class="proj-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-element" style="background-image: url('Assets/petroleo.jpg')">
+                    <div class="p-overlay">
+                        <h3 data-i18n="proj_title_4">Petróleo Brent</h3>
+                        <p data-i18n="proj_desc_4">Análise e modelo preditivo para o valor de fechamento.</p>
+                        <a href="#" class="proj-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card tilt-element" style="background-image: url('Assets/escola.jpg')">
+                    <div class="p-overlay">
+                        <h3 data-i18n="proj_title_5">Presença Estudantil</h3>
+                        <p data-i18n="proj_desc_5">Modelo para previsão de presença estudantil em aula.</p>
+                        <a href="#" class="proj-link"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
                 </div>
 
             </div>
-                        <div class="bar">
-                
-                <div class="info">
-                    <span>Python</span>
-                </div>
+        </section>
 
-                <div class="progress-line css">
-                    <span></span>
-                </div>
-
+        <section id="contact">
+            <h2 class="section-title" data-i18n="nav_contact">Contato</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+                    <textarea placeholder="Sua Mensagem..." rows="5"></textarea>
+                    <button type="submit" class="btn-submit" data-i18n="btn_send">Enviar para Victor</button>
+                </form>
             </div>
-                        <div class="bar">
-                
-                <div class="info">
-                    <span>Power BI</span>
-                </div>
+        </section>
+    </main>
 
-                <div class="progress-line css">
-                    <span></span>
-                </div>
+    <button id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
-            </div>
-                        <div class="bar">
-                
-                <div class="info">
-                    <span>Excel</span>
-                </div>
-
-                <div class="progress-line css">
-                    <span></span>
-                </div>
-
-            </div>
-                        <div class="bar">
-                
-                <div class="info">
-                    <span>Pandas</span>
-                </div>
-
-                <div class="progress-line css">
-                    <span></span>
-                </div>
-
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Victor Gil | Engineering & Data</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
             </div>
         </div>
-
-    </section>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
