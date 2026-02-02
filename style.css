@@ -232,13 +232,26 @@ section { padding: 120px 10% 80px; min-height: 100vh; display: flex; flex-direct
 }
 
 /* SKILLS 6 BOXES */
-.skills-grid-6 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; width: 100%; }
-.skill-group { background: var(--card); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); }
-.skill-group i { color: var(--primary); font-size: 1.5rem; margin-bottom: 10px; }
-.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-.skill-tags span { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56,189,248,0.2); padding: 4px 12px; border-radius: 5px; font-size: 0.8rem; }
+.skills-grid-6 { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; 
+    width: 100%; 
+}
 
-/* SKILL TAGS CLICÁVEIS */
+.skill-group { 
+    background: var(--card); 
+    padding: 25px; 
+    border-radius: 15px; 
+    border: 1px solid rgba(255,255,255,0.05); 
+}
+
+.skill-group i { 
+    color: var(--primary); 
+    font-size: 1.5rem; 
+    margin-bottom: 10px; 
+}
+
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
@@ -246,24 +259,31 @@ section { padding: 120px 10% 80px; min-height: 100vh; display: flex; flex-direct
     margin-top: 15px;
 }
 
+/* Ajuste Unificado para Span e Links */
+.skill-tags span, 
 .skill-tags a {
+    display: inline-block;          /* Permite animar o movimento (transform) */
     background: rgba(56, 189, 248, 0.1);
     border: 1px solid rgba(56, 189, 248, 0.2);
-    padding: 6px 14px;
+    padding: 6px 14px;              /* Um pouco mais de respiro */
     border-radius: 6px;
     font-size: 0.8rem;
-    color: var(--text);
-    text-decoration: none; /* Remove o sublinhado */
-    transition: 0.3s;
-    display: inline-block;
+    color: var(--text);             /* Garante que o texto apareça */
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s ease;      /* A animação suave de transição */
 }
 
+/* Animação de Hover (Para ambos) */
+.skill-tags span:hover, 
 .skill-tags a:hover {
-    background: var(--primary);
-    color: #050810;
+    transform: translateY(-5px);    /* O pulo para cima */
+    background: var(--primary);     /* Fica azul */
+    color: #050810;                 /* Texto escuro para ler no azul */
     border-color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4); /* O brilho */
 }
 
 /* PROJETOS 6 CARDS - AJUSTADO (RÁPIDO E SUTIL) */
